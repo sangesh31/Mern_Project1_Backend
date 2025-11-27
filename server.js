@@ -18,7 +18,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: "https://ordermenu.netlify.app", // Your frontend URL
+  origin: "https://oredermenu.netlify.app", // Your frontend URL
   methods: ["GET", "POST", "PUT"],        // Allowed HTTP methods
 }));
 
