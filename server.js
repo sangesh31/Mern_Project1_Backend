@@ -17,7 +17,11 @@ if (!process.env.MONGO_URI) {
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://ordermenu.netlify.app", // Your frontend URL
+  methods: ["GET", "POST", "PUT"],        // Allowed HTTP methods
+}));
+
 app.use(express.json());
 
 // MongoDB connection
